@@ -9,7 +9,9 @@
 	[Description] Varchar(255),
 	[TransactionDate] Date Not NUll,
 	[CreatedAt] DATETIME NOT NULL DEFAULT GETDATE(),
-
+	[PaymentMethodID] Int,
+	
 	FOREIGN KEY (UserID) REFERENCES [User](id),
-    FOREIGN KEY (CategoryID) REFERENCES Categories(id)
+    FOREIGN KEY (CategoryID) REFERENCES Categories(id),
+	Foreign Key (PaymentMethodID) References PaymentMethods(Id)
 )
